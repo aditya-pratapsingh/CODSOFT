@@ -1,0 +1,28 @@
+ #include<iostream>
+ #include<ctime>
+ #include<ctime>
+ int main()
+ {
+ srand(time(0));
+ int secretnumber=rand() % 100+1;
+ int userguess;
+ while(true)
+ {
+ std::cout<<"Guess the Number:";
+ std::cin>>userguess;
+ if(userguess==secretnumber)
+ {
+ std::cout<<"You Win"<<std::endl;
+ break;
+ }
+ else if(userguess<secretnumber)
+ {
+ std::cout<<"To Low Try Again"<<std::endl;
+ }
+ else
+ {
+ std::cout<<"To High Try Again"<<std::endl;
+ }
+ }
+ return 0;
+ }
